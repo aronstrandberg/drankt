@@ -5,6 +5,7 @@ class BeersController < ApplicationController
   # GET /beers.json
   def index
     @beers = Beer.all
+    @random = Beer.random_beer
   end
 
   # GET /beers/1

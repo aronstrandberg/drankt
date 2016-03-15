@@ -1,5 +1,11 @@
 %h1 Listing beers
 
+%p
+  %b
+    Here's a random beer to try:
+%p
+  = "#{@random.name} (#{@random.price} kr)"
+
 %table
   %thead
     %tr

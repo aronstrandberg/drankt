@@ -30,8 +30,8 @@
         %td= beer.price
         %td= beer.available
         %td= beer.country
-        %td= beer.volume
-        %td= beer.alcohol_percentage
+        %td= "#{beer.volume / 10} cl"
+        %td= "#{beer.alcohol_percentage}%"
         %td= link_to 'Show', beer
         %td= link_to 'Edit', edit_beer_path(beer)
         %td= link_to 'Destroy', beer, :method => :delete, :data => { :confirm => 'Are you sure?' }

@@ -1,0 +1,44 @@
+$form-text-color: $black;
+
+form {
+    width: 100%;
+}
+
+input, button {
+    border: 0;
+    font-family: $font;
+}
+
+#{$all-text-inputs} {
+    width: 100%;
+    border-bottom: 2px solid $secondary;
+    margin: 1em auto;
+    line-height: 1.5;
+    background: $primary;
+    color: $form-text-color;
+    height: 150%;
+    text-align: center;
+    font-size: 3vw;
+
+    @include placeholder {
+        color: $form-text-color;
+    }
+}
+
+#{$all-text-inputs-focus} {
+    outline: none;
+    @include placeholder {
+        color: $gray;
+    }
+}
+
+#{$all-buttons} {
+    background: $secondary;
+    color: $form-text-color;
+    font-size: 1rem;
+    padding: .5rem 0;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 5px;
+}

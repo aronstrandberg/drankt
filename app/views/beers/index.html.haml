@@ -36,6 +36,4 @@
         %td= link_to 'Edit', edit_beer_path(beer)
         %td= link_to 'Destroy', beer, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-%br
-
-= link_to 'New Beer', new_beer_path
+= button_to 'New beer', new_beer_path, method: :get

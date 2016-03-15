@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @beer.name
+%p
+  %b Brand:
+  = @beer.brand
+%p
+  %b Category:
+  = @beer.category
+%p
+  %b Price:
+  = @beer.price
+%p
+  %b Available:
+  = @beer.available
+%p
+  %b Country:
+  = @beer.country
+%p
+  %b Volume:
+  = @beer.volume
+%p
+  %b Alcohol percentage:
+  = @beer.alcohol_percentage
+
+= link_to 'Edit', edit_beer_path(@beer)
+\|
+= link_to 'Back', beers_path

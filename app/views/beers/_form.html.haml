@@ -1,0 +1,34 @@
+= form_for @beer do |f|
+  - if @beer.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@beer.errors.count, "error")} prohibited this beer from being saved:"
+      %ul
+        - @beer.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :brand
+    = f.text_field :brand
+  .field
+    = f.label :category
+    = f.text_field :category
+  .field
+    = f.label :price
+    = f.number_field :price
+  .field
+    = f.label :available
+    = f.check_box :available
+  .field
+    = f.label :country
+    = f.text_field :country
+  .field
+    = f.label :volume
+    = f.number_field :volume
+  .field
+    = f.label :alcohol_percentage
+    = f.text_field :alcohol_percentage
+  .actions
+    = f.submit 'Save'

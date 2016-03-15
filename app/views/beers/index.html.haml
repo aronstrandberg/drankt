@@ -1,0 +1,35 @@
+%h1 Listing beers
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Brand
+      %th Category
+      %th Price
+      %th Available
+      %th Country
+      %th Volume
+      %th Alcohol percentage
+      %th
+      %th
+      %th
+
+  %tbody
+    - @beers.each do |beer|
+      %tr
+        %td= beer.name
+        %td= beer.brand
+        %td= beer.category
+        %td= beer.price
+        %td= beer.available
+        %td= beer.country
+        %td= beer.volume
+        %td= beer.alcohol_percentage
+        %td= link_to 'Show', beer
+        %td= link_to 'Edit', edit_beer_path(beer)
+        %td= link_to 'Destroy', beer, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Beer', new_beer_path

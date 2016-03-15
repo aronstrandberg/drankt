@@ -4,7 +4,7 @@
   %b
     Here's a random beer to try:
 %p
-  = "#{@random.name} (#{@random.price} kr)"
+  = "#{@random.name} (#{@random.price} kr)" unless @random.nil?
 
 %table
   %thead

@@ -16,8 +16,8 @@
         %td= user.email
         %td= user.first_name
         %td= user.last_name
-        %td= link_to 'Show', user
-        %td= link_to 'Edit', edit_user_path(user)
-        %td= link_to 'Destroy', user, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= button_to 'Show', user, method: :get
+        %td= button_to 'Edit', edit_user_path(user), method: :get
+        %td= button_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }
 
 = button_to 'New user', new_user_path, method: :get

@@ -8,8 +8,8 @@ setupWatchers = ->
     './vendor/assets/javascripts/**/*.coffee'
   ], [ 'reload' ]
   gulp.watch [
-    './vendor/assets/stylesheets/**/*.{sass, scss}'
-    './app/assets/stylesheets/**/*.{sass, scss}'
+    './vendor/assets/stylesheets/**/*.scss'
+    './app/assets/stylesheets/**/*.scss'
   ], [ 'reloadCSS' ]
   return
 

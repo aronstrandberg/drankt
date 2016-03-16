@@ -33,13 +33,12 @@ input, button {
 }
 
 #{$all-buttons} {
+    @include span-columns(10);
+    @include shift(1);
     background: $secondary;
     color: $form-text-color;
     font-size: 1rem;
     padding: .5rem 0;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
     border-radius: 5px;
     &:hover {
         cursor: pointer;

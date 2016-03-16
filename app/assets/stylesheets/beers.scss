@@ -3,18 +3,27 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .beers {
-  @include span-columns(12);
+  @include span-columns(10);
+  @include shift(1);
+  &.random {
+    .beer {
+      @include shift(3);
+    }
+  }
 }
 
 .beer {
-  @include span-columns(10 of 12);
-  @include shift(1);
   @include margin(1em null);
+  @include span-columns(5 of 10);
+  @include omega(2n);
   background: lighten($primary, 20%);
   border-radius: 5px;
 
+  @include media($small) {
+    @include span-columns(10 of 10);
+  }
+
   .text {
-    @include span-columns(8 of 10);
-    @include shift(1);
+    @include span-columns(5 of 5);
   }
 }

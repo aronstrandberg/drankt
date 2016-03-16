@@ -41,4 +41,7 @@ input, button {
     max-width: 800px;
     margin: 0 auto;
     border-radius: 5px;
+    &:hover {
+        cursor: pointer;
+    }
 }

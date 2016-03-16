@@ -1,20 +1,13 @@
-%h1 Listing beers
+%h1 Drankt beers
 
-%p
-  %b
-    Here's a random beer to try:
-%p
-  = "#{@random.name} (#{@random.price} kr)" unless @random.nil?
+%h3 Here's a random beer to try:
+
+%ul.beers.random
+  = render partial: "beer", locals: {beer: @random}
+
+%h3 Here's our other beers
 
 %ul.beers
-  - @beers.each do |beer|
-    %li.beer
-      = link_to beer do
-        .text
-          %h3= beer.name
-          %p= beer.category
-          %p= beer.price
-          %p= "#{beer.volume / 10} cl"
-          %p= "#{beer.alcohol_percentage}%"
+  = render @beers - [@random]
 
 = button_to 'New beer', new_beer_path, method: :get

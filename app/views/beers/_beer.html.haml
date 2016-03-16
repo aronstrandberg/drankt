@@ -1,0 +1,17 @@
+%li.beer
+  = link_to beer do
+    .text
+      %h3= beer.name
+      %table
+        %tr
+          %th category
+          %td= beer.category
+        %tr
+          %th price
+          %td= beer.price
+        %tr
+          %th volume
+          %td= "#{beer.volume / 10} cl"
+        %tr
+          %th alc %
+          %td= "#{beer.alcohol_percentage}%"

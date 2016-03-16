@@ -2,6 +2,5 @@
 
 = render 'form'
 
-= link_to 'Show', @beer
-\|
-= link_to 'Back', beers_path
+= button_to 'Show', @beer, method: :get
+= button_to 'Back', beers_path, method: :get

@@ -25,6 +25,5 @@
   %b Alcohol percentage:
   = @beer.alcohol_percentage
 
-= link_to 'Edit', edit_beer_path(@beer)
-\|
-= link_to 'Back', beers_path
+= button_to 'Edit', edit_beer_path(@beer), method: :get
+= button_to 'Back', beers_path, method: :get

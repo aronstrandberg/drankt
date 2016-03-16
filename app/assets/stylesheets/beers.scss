@@ -1,3 +1,20 @@
 // Place all the styles related to the Beers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.beers {
+  @include span-columns(12);
+}
+
+.beer {
+  @include span-columns(10 of 12);
+  @include shift(1);
+  @include margin(1em null);
+  background: lighten($primary, 20%);
+  border-radius: 5px;
+
+  .text {
+    @include span-columns(8 of 10);
+    @include shift(1);
+  }
+}

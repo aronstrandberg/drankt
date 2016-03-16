@@ -17,7 +17,8 @@ gulp.task 'reload', ->
   browserSync.reload()
 
 gulp.task 'reloadCSS', ->
-  browserSync.reload '*.css'
+  browserSync.reload '*.scss'
+
 
 gulp.task 'init', ->
   browserSync.init

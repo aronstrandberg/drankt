@@ -1,7 +1,6 @@
-$form-text-color: $black;
-
 form {
-    width: 100%;
+    @include span-columns(12);
+    // width: 100%;
     clear: both;
 }
 
@@ -37,11 +36,20 @@ input, button {
     @include span-columns(10);
     @include shift(1);
     background: $secondary;
-    color: $form-text-color;
+    color: $button-text-color;
     font-size: 1rem;
+    margin-top: 1em;
     padding: .5rem 0;
     border-radius: 5px;
     &:hover {
         cursor: pointer;
+    }
+    &.accept {
+        background: $button-accept-color;
+        color: $white;
+    }
+    &.decline {
+        background: $button-decline-color;
+        color: $white;
     }
 }

@@ -6,5 +6,16 @@ $primary: #fbb034;
 $secondary: #ffdd00;
 
 $font: "ff-tisa-sans-web-pro";
-$base-link-color: $black;
+$base-text-color: $white;
+$base-link-color: $white;
+
+$background-url: "http://source.unsplash.com/UErWoQEoMrc/1920x1080";
+$background-fade: rgba($black, 0.5);
+
 $small: new-breakpoint(max-width 800px);
+
+
+$form-text-color: $base-text-color;
+$button-text-color: $black;
+$button-accept-color: #05cc47;
+$button-decline-color: #e64b50;

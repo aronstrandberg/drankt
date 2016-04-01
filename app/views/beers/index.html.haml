@@ -1,13 +1,15 @@
-%h1 Drankt beers
+%h1 drankt beers
 
 %h3 Here's a random beer to try:
 
 %ul.beers.random
   = render partial: "beer", locals: {beer: @random}
+  = button_to "Yes, let's do it!", {}, {class: 'accept'}
+  = button_to "No, try another one", {}, {class: 'decline'}
 
 %h3 Here's our other beers
 
 %ul.beers
   = render @beers - [@random]
+  = button_to 'New beer', new_beer_path, method: :get
 
-= button_to 'New beer', new_beer_path, method: :get

@@ -4,12 +4,12 @@ class BeersController < ApplicationController
 
   def like
     @beer.liked_by current_user
-    redirect_to beers_url, notice: 'You liked it!'
+    redirect_to random_beers_path, notice: 'You liked it!'
   end
 
   def dislike
     @beer.downvote_by current_user
-    redirect_to beers_url, notice: "Next time!"
+    redirect_to random_beers_path, notice: "Next time!"
   end
 
   def random

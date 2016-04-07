@@ -5,16 +5,15 @@
       %table
         %tr
           %th category
-          %td= beer.category
-        %tr
           %th price
-          %td= beer.price
-        %tr
           %th volume
+          %th alcohol
+          %th 🍻
+          %th 💩
+        %tr
+          %td= beer.category
+          %td= beer.price
           %td= "#{beer.volume / 10} cl"
-        %tr
-          %th alc %
           %td= "#{beer.alcohol_percentage}%"
-        %tr
-          %th Votes
-          %td= "#{beer.get_likes.size}🍻  #{beer.get_dislikes.size}💩"
+          %td= beer.get_likes.size
+          %td= beer.get_dislikes.size

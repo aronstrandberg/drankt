@@ -65,18 +65,3 @@ breweries = Brewery.create([
         ]
     },
 ])
-
-
-
-users = User.create([
-    {
-        first_name: "Aron",
-        last_name: "Strandberg",
-        email: "aron@aronstrandberg.com"
-    },
-    {
-        first_name: "Shayan",
-        last_name: "Effati",
-        email: "shayan@effati.com"
-    }
-])

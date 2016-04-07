@@ -1,0 +1,9 @@
+.comments {
+  @include span-columns(8);
+  @include shift(2);
+}
+.comment {
+  font-size: 2rem;
+  display: block;
+  margin: 1em auto;
+}

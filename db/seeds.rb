@@ -6,85 +6,22 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-beers = Beer.create([
-    {
-        name: "Peroni",
-        category: "Lager",
-        price: 25,
-        available: true,
-        volume: 330,
-        alcohol_percentage: 5.3
-    },
-    {
-        name: "K:rlek Höst/Vinter 2015",
-        category: "American Pale Ale",
-        price: 30,
-        available: true,
-        volume: 330,
-        alcohol_percentage: 5.6
-    },
-    {
-        name: "Carlsberg non-alcoholic",
-        category: "Lager",
-        price: 20,
-        available: true,
-        volume: 330,
-        alcohol_percentage: 0.3
-    },
-    {
-        name: "Spontanbasil",
-        category: "Lambic",
-        price: 65,
-        available: true,
-        volume: 700,
-        alcohol_percentage: 5.5
-    },
-    {
-        name: "Nebuchadnezzar",
-        category: "Imperial IPA",
-        price: 35,
-        available: true,
-        volume: 330,
-        alcohol_percentage: 8.5
-    },
-    {
-        name: "Brooklyn Lager",
-        category: "Lager",
-        price: 25,
-        available: true,
-        volume: 355,
-        alcohol_percentage: 5.2
-    },
-    {
-        name: "Corona",
-        category: "Lager",
-        price: 25,
-        available: true,
-        volume: 330,
-        alcohol_percentage: 4.5
-    }
-])
+50.times { Fabricate(:beer) }
 
 breweries = Brewery.create([
     {
         name: "Mikkeller",
         country: "Denmark",
-        beers: [
-            beers[3]
-        ]
+        beers: []
     },
     {
         name: "Omnipollo",
         country: "Sweden",
-        beers: [
-            beers[4]
-        ]
+        beers: []
     },
     {
         name: "Brooklyn Brewery",
         country: "US",
-        beers: [
-            beers[5]
-        ]
+        beers: []
     }
 ])

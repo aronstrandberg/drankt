@@ -25,6 +25,9 @@ gem 'neat'
 gem 'acts_as_votable', '~> 0.10.0'
 # User authentication
 gem 'clearance'
+# Seed data
+gem 'faker', '>= 1.6.3'
+gem 'fabrication'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

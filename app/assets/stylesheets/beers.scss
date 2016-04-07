@@ -19,7 +19,9 @@
     @include shift(1);
   }
   @include omega(2n);
-  background: rgba($white, 0.25);
+  // background: rgba($white, 0.25);
+  background: $white;
+  color: $black;
   border-radius: 5px;
 
   @include media($small) {

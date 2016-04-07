@@ -1,15 +1,13 @@
 class BeersController < ApplicationController
   before_action :set_beer, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_vote_beer, only: [:like, :dislike]
 
   def like
-    @beer = Beer.find(params[:beer_id])
     @beer.liked_by current_user
     redirect_to beers_url, notice: 'You liked it!'
   end
 
   def dislike
-    @beer = Beer.find(params[:beer_id])
     @beer.downvote_by current_user
     redirect_to beers_url, notice: "Next time!"
   end
@@ -84,6 +82,10 @@ class BeersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_beer
       @beer = Beer.find(params[:id])
+    end
+
+    def set_vote_beer
+      @beer = Beer.find(params[:beer_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

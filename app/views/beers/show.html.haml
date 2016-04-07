@@ -4,20 +4,20 @@
   %b Name:
   = @beer.name
 %p
-  %b Brand:
-  = @beer.brand
+  %b Brewery:
+  = @beer.brewery.name unless @beer.brewery.nil?
 %p
   %b Category:
   = @beer.category
 %p
   %b Price:
-  = @beer.price
+  = "#{@beer.price}:-"
 %p
   %b Available:
   = @beer.available
 %p
   %b Country:
-  = @beer.country
+  = @beer.brewery.country unless @beer.brewery.nil?
 %p
   %b Volume:
   = @beer.volume

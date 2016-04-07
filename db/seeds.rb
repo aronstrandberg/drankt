@@ -46,6 +46,22 @@ beers = Beer.create([
         available: true,
         volume: 330,
         alcohol_percentage: 8.5
+    },
+    {
+        name: "Brooklyn Lager",
+        category: "Lager",
+        price: 25,
+        available: true,
+        volume: 355,
+        alcohol_percentage: 5.2
+    },
+    {
+        name: "Corona",
+        category: "Lager",
+        price: 25,
+        available: true,
+        volume: 330,
+        alcohol_percentage: 4.5
     }
 ])
 
@@ -64,4 +80,11 @@ breweries = Brewery.create([
             beers[4]
         ]
     },
+    {
+        name: "Brooklyn Brewery",
+        country: "US",
+        beers: [
+            beers[5]
+        ]
+    }
 ])

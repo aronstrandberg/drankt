@@ -1,29 +1,30 @@
 %p#notice= notice
 
-%p
-  %b Name:
-  = @beer.name
-%p
-  %b Brewery:
-  = @beer.brewery.name unless @beer.brewery.nil?
-%p
-  %b Category:
-  = @beer.category
-%p
-  %b Price:
-  = "#{@beer.price}:-"
-%p
-  %b Available:
-  = @beer.available
-%p
-  %b Country:
-  = @beer.brewery.country unless @beer.brewery.nil?
-%p
-  %b Volume:
-  = @beer.volume
-%p
-  %b Alcohol percentage:
-  = @beer.alcohol_percentage
+.beer.details
+  %p
+    %b Name:
+    = @beer.name
+  %p
+    %b Brewery:
+    = @beer.brewery.name unless @beer.brewery.nil?
+  %p
+    %b Category:
+    = @beer.category
+  %p
+    %b Price:
+    = "#{@beer.price}:-"
+  %p
+    %b Available:
+    = @beer.available
+  %p
+    %b Country:
+    = @beer.brewery.country unless @beer.brewery.nil?
+  %p
+    %b Volume:
+    = @beer.volume
+  %p
+    %b Alcohol percentage:
+    = @beer.alcohol_percentage
 
 
 = form_for [@beer, Comment.new] do |f|

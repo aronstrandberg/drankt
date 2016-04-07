@@ -2,6 +2,7 @@
   = link_to beer do
     .text
       %h1= beer.name
+      %h4= beer.brewery.name if beer.brewery
       %table
         %tr
           %th category

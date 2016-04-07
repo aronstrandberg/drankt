@@ -1,12 +1,9 @@
 .beers {
   @include outer-container(1200px);
-  // @include span-columns(12);
   &.random {
     .beer {
       @include span-columns(10);
-      // @include shift(3);
       @include media($small) {
-        // @include shift(0);
       }
     }
   }
@@ -19,7 +16,7 @@
     @include shift(1);
   }
   @include omega(2n);
-  // background: rgba($white, 0.25);
+
   background: $white;
   color: $black;
   border-radius: 5px;
@@ -36,4 +33,9 @@
       color: $black;
     }
   }
+}
+
+.beer.details {
+  @include span-columns(6);
+  @include shift(3);
 }

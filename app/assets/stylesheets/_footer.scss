@@ -1,9 +1,9 @@
 footer {
   @include span-columns(12);
-  background: $white;
+  background: $black;
   bottom: 0;
   clear: both;
-  color: $black;
+  color: $white;
   padding: 1em 0;
   position: fixed;
   z-index: 9;

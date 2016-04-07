@@ -9,6 +9,6 @@
         try{Typekit.load({ async: true });}catch(e){}
     = csrf_meta_tags
   %body
-    = render partial: 'current_user'
+    = render partial: 'header'
     = yield
     = render partial: 'footer'

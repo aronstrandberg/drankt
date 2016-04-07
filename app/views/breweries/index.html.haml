@@ -7,17 +7,15 @@
       %th Country
       %th
       %th
-      %th
 
   %tbody
     - @breweries.each do |brewery|
       %tr
         %td= brewery.name
         %td= brewery.country
-        %td= link_to 'Show', brewery
-        %td= link_to 'Edit', edit_brewery_path(brewery)
-        %td= link_to 'Destroy', brewery, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= button_to 'Edit', edit_brewery_path(brewery), method: :get
+        %td= button_to 'Destroy', brewery, method: :delete, data: { :confirm => 'Are you sure?' }
 
 %br
 
-= link_to 'New Brewery', new_brewery_path
+= button_to 'New Brewery', new_brewery_path, method: :get

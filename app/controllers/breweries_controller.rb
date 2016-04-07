@@ -25,29 +25,20 @@ class BreweriesController < ApplicationController
   # POST /breweries.json
   def create
     @brewery = Brewery.new(brewery_params)
-
-    respond_to do |format|
-      if @brewery.save
-        format.html { redirect_to @brewery, notice: 'Brewery was successfully created.' }
-        format.json { render :show, status: :created, location: @brewery }
-      else
-        format.html { render :new }
-        format.json { render json: @brewery.errors, status: :unprocessable_entity }
-      end
+    if @brewery.save
+      redirect_to breweries_path, notice: 'Brewery was successfully created.'
+    else
+      render :new
     end
   end
 
   # PATCH/PUT /breweries/1
   # PATCH/PUT /breweries/1.json
   def update
-    respond_to do |format|
       if @brewery.update(brewery_params)
-        format.html { redirect_to @brewery, notice: 'Brewery was successfully updated.' }
-        format.json { render :show, status: :ok, location: @brewery }
-      else
-        format.html { render :edit }
-        format.json { render json: @brewery.errors, status: :unprocessable_entity }
-      end
+      redirect_to breweries_path, notice: 'Brewery was successfully updated.'
+    else
+      render :edit
     end
   end
 
@@ -55,10 +46,7 @@ class BreweriesController < ApplicationController
   # DELETE /breweries/1.json
   def destroy
     @brewery.destroy
-    respond_to do |format|
-      format.html { redirect_to breweries_url, notice: 'Brewery was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+      Redirect_to breweries_url, notice: 'Brewery was successfully destroyed.'
   end
 
   private

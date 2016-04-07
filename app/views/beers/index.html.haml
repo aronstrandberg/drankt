@@ -1,6 +1,5 @@
 
 - if signed_in?
-  %h1 drankt beers
   %h3 Here's a random beer to try:
   %ul.beers.random
     = render partial: "beer", locals: {beer: @random}

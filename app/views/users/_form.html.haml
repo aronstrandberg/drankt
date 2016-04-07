@@ -8,7 +8,10 @@
 
   .field
     = f.label :email
-    = f.text_field :email
+    = f.text_field :email, type: 'email'
+  .field
+    = f.label :password
+    = f.password_field :password
   .field
     = f.label :first_name
     = f.text_field :first_name
@@ -17,3 +20,14 @@
     = f.text_field :last_name
   .actions
     = f.submit 'Save'
+
+
+/ <div class="text-field">
+/   <%= form.label :email %>
+/   <%= form.text_field :email, type: 'email' %>
+/ </div>
+
+/ <div class="password-field">
+/   <%= form.label :password %>
+/   <%= form.password_field :password %>
+/ </div>

@@ -4,9 +4,9 @@
 
 %ul.beers.random
   = render partial: "beer", locals: {beer: @random}
-  = button_to "Yes, I liked it", {}, {class: 'accept'}
-  = button_to "Hm, gimme something else", {}, {}
-  = button_to "No, hated it", {}, {class: 'decline'}
+  = button_to "Yes, I liked it", beer_like_path(beer_id: @random.id), {class: 'accept'}
+  = button_to "Hm, gimme something else", random_beers_path, method: :get
+  = button_to "No, hated it", beer_dislike_path(beer_id: @random.id), {class: 'decline'}
 
 %h3 Here's our other beers
 

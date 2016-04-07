@@ -15,3 +15,6 @@
         %tr
           %th alc %
           %td= "#{beer.alcohol_percentage}%"
+        %tr
+          %th Votes
+          %td= "#{beer.get_likes.size}🍻  #{beer.get_dislikes.size}💩"

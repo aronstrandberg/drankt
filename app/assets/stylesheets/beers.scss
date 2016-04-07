@@ -31,5 +31,9 @@
 
   .text {
     @include span-columns(5 of 5);
+    color: $black;
+    a {
+      color: $black;
+    }
   }
 }

@@ -1,6 +1,24 @@
 class BeersController < ApplicationController
   before_action :set_beer, only: [:show, :edit, :update, :destroy]
 
+
+  def like
+    @beer = Beer.find(params[:beer_id])
+    @beer.liked_by current_user
+    redirect_to beers_url, notice: 'You liked it!'
+  end
+
+  def dislike
+    @beer = Beer.find(params[:beer_id])
+    @beer.downvote_by current_user
+    redirect_to beers_url, notice: "Next time!"
+  end
+
+  def random
+    @beer = Beer.random_beer
+    redirect_to beers_url, notice: "Here's another one!"
+  end
+
   # GET /beers
   # GET /beers.json
   def index
@@ -70,6 +88,6 @@ class BeersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def beer_params
-      params.require(:beer).permit(:name, :brand, :category, :price, :available, :country, :volume, :alcohol_percentage)
+      params.require(:beer).permit(:name, :brewery, :category, :price, :available, :volume, :alcohol_percentage)
     end
 end

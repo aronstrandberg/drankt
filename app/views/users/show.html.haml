@@ -10,6 +10,12 @@
   %b Last name:
   = @user.last_name
 
+%p
+  %b Beers you liked:
+%ul
+  - @user.find_liked_items.each do |beer|
+    %li= beer.name
+
 = link_to 'Edit', edit_user_path(@user)
 \|
 = link_to 'Back', users_path

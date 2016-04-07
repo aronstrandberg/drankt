@@ -4,8 +4,9 @@
 
 %ul.beers.random
   = render partial: "beer", locals: {beer: @random}
-  = button_to "Yes, let's do it!", {}, {class: 'accept'}
-  = button_to "No, try another one", {}, {class: 'decline'}
+  = button_to "Yes, I liked it", {}, {class: 'accept'}
+  = button_to "Hm, gimme something else", {}, {}
+  = button_to "No, hated it", {}, {class: 'decline'}
 
 %h3 Here's our other beers
 

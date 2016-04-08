@@ -8,7 +8,7 @@ class BeersController < ApplicationController
   end
 
   def dislike
-    @beer.downvote_by current_user
+    @beer.dislike_by current_user
     redirect_to random_beers_path, notice: "Next time!"
   end
 

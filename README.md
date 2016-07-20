@@ -1,6 +1,8 @@
 # drankt
 Like tinder for beer
 
+School project at KTH in course DD2390 Internet Programming
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
